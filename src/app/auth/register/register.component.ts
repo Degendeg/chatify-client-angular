@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
 import { FormsModule } from '@angular/forms'
-import { AuthService } from '../core/auth.service'
+import { AuthService } from '../utils/auth.service'
 import { Location } from '@angular/common'
 
 @Component({

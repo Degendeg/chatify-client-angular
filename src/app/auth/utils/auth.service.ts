@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
 import { Observable, tap } from 'rxjs'
+import { environment } from '../../../environments/environment'
 
 interface RegisterRequest {
   username: string
@@ -22,8 +23,8 @@ interface LoginResponse {
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private apiUrl = 'https://chatify-api.up.railway.app'
-  private jwt = ''
+  private apiUrl = environment.apiUrl
+  private jwt = 'jwt'
   private csrfToken = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => (Math.random() * 16 | 0).toString(16))
 
   constructor(private http: HttpClient) { }

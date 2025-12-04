@@ -6,12 +6,12 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 20px;
-  font-family: Garamond, serif;
 }
 
 button {
   width: auto;
-  padding: 0.6rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
   background-color: #ABABAB;
   color: white;
   border: none;
@@ -22,4 +22,14 @@ button {
 
 button:hover {
   background-color: #A1A1A1;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2vh;
+}
+
+.home {
+  text-align: center;
+  margin-top: 3rem;
 }

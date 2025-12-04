@@ -13,9 +13,6 @@ import { RouterModule } from '@angular/router';
       <button routerLink="/register">Register</button>
     </div>
   `,
-  styles: [`
-    .home { text-align: center; margin-top: 3rem; }
-    button { margin: 0.5rem; padding: 0.5rem 1rem; font-size: 1rem; }
-  `]
+  // styles: [``]
 })
 export class HomeComponent { }

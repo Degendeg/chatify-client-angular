@@ -1,0 +1,30 @@
+<div class="chat-wrapper relative">
+
+  <button
+    class="absolute top-2 right-2 bg-red-500 text-xs hover:bg-red-700 text-white cursor-pointer font-bold py-1 px-2 border border-red-700 rounded"
+    (click)="logOut()">Logout</button>
+
+  <h2>Your messages</h2>
+
+  <div class="relative flex py-5 items-center">
+    <div class="flex-grow border-t border-gray-400"></div>
+    <span class="flex-shrink mx-4 text-gray-400">💬</span>
+    <div class="flex-grow border-t border-gray-400"></div>
+  </div>
+
+  <div *ngIf="loading">Loading...</div>
+
+  <div *ngIf="!loading && messages.length === 0">
+    No messages found.
+  </div>
+
+  <ul *ngIf="!loading && messages.length > 0">
+    <li *ngFor="let msg of messages">
+      <div class="message">
+        <span class="text">{{ msg.text }}</span>
+        <span class="date">{{ msg.createdAt | date:'short' }}</span>
+      </div>
+    </li>
+  </ul>
+
+</div>
