@@ -3,12 +3,13 @@ import { FormsModule } from '@angular/forms'
 import { AuthService } from '../utils/auth.service'
 import { Router, RouterModule } from '@angular/router'
 import { Location } from '@angular/common'
+import { AutoFocusDirective } from '../../directives/autofocus.directive'
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
-  imports: [FormsModule, RouterModule]
+  imports: [FormsModule, RouterModule, AutoFocusDirective]
 })
 export class LoginComponent {
   username = ''

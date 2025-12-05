@@ -11,6 +11,15 @@ export interface Message {
   conversationId: string
 }
 
+export interface NewMessage {
+  text: string,
+  conversationId: any
+}
+
+export interface CreateMessageResponse {
+  latestMessage: Message;
+}
+
 @Injectable({ providedIn: 'root' })
 export class ChatService {
   private apiUrl = environment.apiUrl
@@ -23,5 +32,9 @@ export class ChatService {
       : `${this.apiUrl}/messages`
 
     return this.http.get<Message[]>(url)
+  }
+
+  sendMessage(newMessage: NewMessage): Observable<CreateMessageResponse> {
+    return this.http.post<CreateMessageResponse>(`${this.apiUrl}/messages`, newMessage)
   }
 }

@@ -1,5 +1,5 @@
-<input [(ngModel)]="username" placeholder="Username">
+<input [(ngModel)]="username" placeholder="Username" autofocus>
 <input [(ngModel)]="password" type="password" placeholder="Password">
-<input [(ngModel)]="email" placeholder="Email">
+<input [(ngModel)]="email" (keydown.enter)="(username && password && email) ? register() : null" placeholder="Email">
 <button [disabled]="!username || !password || !email" (click)="register()">Register</button>
 <button (click)="goBack()">Go back</button>

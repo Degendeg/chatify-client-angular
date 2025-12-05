@@ -2,12 +2,13 @@ import { Component } from '@angular/core'
 import { FormsModule } from '@angular/forms'
 import { AuthService } from '../utils/auth.service'
 import { Location } from '@angular/common'
+import { AutoFocusDirective } from '../../directives/autofocus.directive'
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',
-  imports: [FormsModule]
+  imports: [FormsModule, AutoFocusDirective]
 })
 export class RegisterComponent {
   username = ''
